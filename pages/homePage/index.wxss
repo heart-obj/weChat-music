@@ -1,0 +1,9 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 54.3rpx;
+  height: 54.3rpx;
+  background: red;
+}
