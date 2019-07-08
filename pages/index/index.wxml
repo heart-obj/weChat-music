@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <view class="index-container" >
-   <navigator bindtap="bindViewTap" redirect hover-class="className">首页</navigator>
-   <navigator url="" redirect hover-class="className">推荐</navigator>
-   <navigator url="" redirect hover-class="className">我的</navigator>
+   <navigator url="../homePage/index"  hover-class="navigator-hover">首页</navigator>
+   <navigator url="../recommended/index"  hover-class="navigator-hover">推荐</navigator>
+   <navigator url="../myPage/index"  hover-class="navigator-hover">我的</navigator>
   </view>
 </view>
