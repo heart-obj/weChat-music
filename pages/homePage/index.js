@@ -51,5 +51,12 @@ Page({
         text: '经典'
       }
     ]
-  }
+  },
+  //事件处理函数
+  bindViewTap: function(event) {
+    console.log(this.data.classifyMusic[event.currentTarget.dataset.index])
+    wx.navigateTo({
+      url: '../musicList/index'
+    })
+  },
 })

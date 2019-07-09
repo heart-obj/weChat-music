@@ -3,6 +3,7 @@
     "pages/homePage/index",
     "pages/recommended/index",
     "pages/myPage/index",
+    "pages/musicList/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
