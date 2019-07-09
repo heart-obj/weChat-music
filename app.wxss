@@ -6,4 +6,6 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  padding-top: 20px;
+  font-size: 21.732rpx;
 } 

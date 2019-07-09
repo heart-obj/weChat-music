@@ -1,6 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-  <view>
-    首页
+  <view class="banner-box">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="classify-box">
+    <view class="flex-item bc_green" wx:for="{{classifyMusic}}">
+      <image src="{{item.imgSrc}}" class="classify-image" width="355" height="150"/>
+      <text class="classify-text">{{item.text}}</text>
+    </view>
   </view>
 </view>

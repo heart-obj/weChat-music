@@ -1,9 +1,32 @@
 /**index.wxss**/
-.userinfo {
+.banner-box {
+  width: 100%;
+  height: 300.725rpx;
+}
+.banner-box .slide-image {
+  width: 100%;
+  height: 100%;
+}
+.classify-box {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 54.3rpx;
-  height: 54.3rpx;
-  background: red;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  font-size: 28.976rpx;
+}
+.classify-box .flex-item {
+  width: 349.523rpx;
+  text-align: center;
+  margin-top: 10px;
+}
+.flex-item .classify-image {
+  width: 349.523rpx;
+  height: 349.523rpx;
+}
+.flex-item .classify-text {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
 }

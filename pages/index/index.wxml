@@ -1,8 +1,9 @@
 <!--index.wxml-->
 <view class="container">
   <view class="index-container" >
-   <navigator url="../homePage/index"  hover-class="navigator-hover">首页</navigator>
+  1111
+   <!--<navigator url="../homePage/index"  hover-class="navigator-hover">首页</navigator>
    <navigator url="../recommended/index"  hover-class="navigator-hover">推荐</navigator>
-   <navigator url="../myPage/index"  hover-class="navigator-hover">我的</navigator>
+   <navigator url="../myPage/index"  hover-class="navigator-hover">我的</navigator>-->
   </view>
 </view>
