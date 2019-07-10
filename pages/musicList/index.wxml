@@ -1,3 +1,5 @@
 <view>
-  音乐列表
+  <view wx:for="{{musicArr}}" wx:key="{{index}}">
+   <audio poster="" name="{{item.title}}" author="{{}}" src="{{item.url}}" id="myAudio" controls loop></audio>
+  </view>
 </view>

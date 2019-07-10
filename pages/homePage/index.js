@@ -1,7 +1,5 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
 Page({
   data: {
     motto: '音乐播放器',
@@ -53,10 +51,14 @@ Page({
     ]
   },
   //事件处理函数
-  bindViewTap: function(event) {
+  bindViewTap (event) {
     console.log(this.data.classifyMusic[event.currentTarget.dataset.index])
     wx.navigateTo({
       url: '../musicList/index'
     })
   },
+  // 程序加载的时候调用
+  onLoad () {
+
+  }
 })
