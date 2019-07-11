@@ -1,5 +1,21 @@
-<view>
-  <view wx:for="{{musicArr}}" wx:key="{{index}}">
-   <audio poster="" name="{{item.title}}" author="{{}}" src="{{item.url}}" id="myAudio" controls loop></audio>
+<view class="music-container">
+  <view class="banner"></view>
+  <view class="music-box" wx:for="{{musicArr}}" wx:key="{{index}}" data-index="{{index}}" bindtap="getplayMusic">
+    <image class="music-img" src="{{item.song.album.picUrl}}"></image>
+    <view class="music-text-box">
+      <text>{{item.name}}</text>
+      <text>{{item.song.artists[0].name}}</text>
+    </view>
+  </view>
+</view>
+<view class="play-box">
+  <image class="play-img" src="{{playMusicData.img}}"></image>
+  <view class="play-item">
+    <text>{{playMusicData.name}}</text>
+    <text class="author-text">{{playMusicData.author}}</text>
+  </view>
+  <view class="play-btn-box">
+    <view class="play-btn" wx:if="{{!playSure}}" bindtap="playMusicFunc"><image src="./img/ios-play.png"></image></view>
+    <view class="play-btn" wx:if="{{playSure}}" bindtap="pauseMusicFunc"><image src="./img/ios-pause.png"></image></view>
   </view>
 </view>
