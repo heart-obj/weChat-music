@@ -11,7 +11,8 @@ Page({
       author: ''
     },
     clickOf: true,
-    playSure: false
+    playSure: false,
+    innerAudioContext: null
   },
   getMusicData () {
     const _this = this
@@ -57,21 +58,27 @@ Page({
             },
             clickOf: true
           })
+          _this.data.innerAudioContext.src = _this.data.playMusicData.music
+          if (index != 0) {
+            _this.data.innerAudioContext.stop()
+            _this.data.innerAudioContext.onStop(() => {
+              console.log('停止成功')
+            })
+            _this.data.innerAudioContext.offCanplay()
+            _this.playMusicFunc()
+          }
         }
       })
     }
   },
   playMusicFunc () {
     const _this = this
-    const innerAudioContext = wx.createInnerAudioContext()
-    innerAudioContext.autoplay = true
-    innerAudioContext.src = _this.data.playMusicData.music
-    innerAudioContext.onPlay(() => {
-      console.log('开始播放')
+    _this.data.innerAudioContext.play()
+    _this.data.innerAudioContext.onPlay(() => {
+      console.log('播放成功')
     })
-    innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
+    _this.data.innerAudioContext.onError((err) => {
+      console.log(err)
     })
     _this.setData({
       playSure: true
@@ -79,13 +86,9 @@ Page({
   },
   pauseMusicFunc () {
     const _this = this
-    const innerAudioContext = wx.createInnerAudioContext()
-    innerAudioContext.onPause(() => {
-      console.log('暂停播放')
-    })
-    innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
+    _this.data.innerAudioContext.pause()
+    _this.data.innerAudioContext.onPause(() => {
+      console.log('暂停成功')
     })
     _this.setData({
       playSure: false
@@ -93,5 +96,8 @@ Page({
   },
   onLoad (options) {
     this.getMusicData()
+    this.setData({
+      innerAudioContext: wx.createInnerAudioContext()
+    })
   }
 })
