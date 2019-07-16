@@ -71,6 +71,7 @@ Page({
       })
     }
   },
+  // 播放音乐
   playMusicFunc () {
     const _this = this
     _this.data.innerAudioContext.play()
@@ -79,6 +80,11 @@ Page({
     })
     _this.data.innerAudioContext.onError((err) => {
       console.log(err)
+    })
+    _this.data.innerAudioContext.onEnded(() => {
+      _this.setData({
+        playSure: false
+      })
     })
     _this.setData({
       playSure: true
