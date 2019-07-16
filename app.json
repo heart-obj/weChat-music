@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/playPage/index",
     "pages/homePage/index",
     "pages/recommended/index",
     "pages/myPage/index",
