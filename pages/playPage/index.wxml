@@ -1,0 +1,7 @@
+<view class="control-play-box">
+  <view class="banner-box">
+    <view class="banner-img"><image></image></view>
+  </view>
+  <view class="music-text-box">图文</view>
+  <view class="control-box">控制器</view>
+</view>
